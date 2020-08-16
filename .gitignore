@@ -133,5 +133,6 @@ dmypy.json
 .idea
 start.bat
 start.sh
+venv/
 venv-linux/
 venv-windows/

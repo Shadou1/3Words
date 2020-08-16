@@ -1,0 +1,2 @@
+If `getkey` module gives `TypeError: can only concatenate str (not "bytes") to str`, then go to `"path-to-your-virtual-environment\lib\site-packages\getkey\platforms.py" line 40` and change `buffer += c` to `buffer += str(c, 'utf-8')`.
+Probably will replace `getkey` module later.
