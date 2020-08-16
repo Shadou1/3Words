@@ -131,5 +131,7 @@ dmypy.json
 # Other
 .vscode
 .idea
-venv-linux
-venv-windows
+start.bat
+start.sh
+venv-linux/
+venv-windows/
