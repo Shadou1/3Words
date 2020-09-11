@@ -1,5 +1,5 @@
-import bin.consoleio as consoleio
-import bin.dataio as dataio
+import consoleio
+import dataio
 
 dio = dataio.DataIO("data/basic_words.json",
                     "data/known_words.json",

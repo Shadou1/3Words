@@ -109,7 +109,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if not args.file: args.file = args.word + '.json'
 
-    word_dictionary = get_wiktionary_word(args.word)
+    word_dictionary = get_wiktionary_word(word)
 
     with open(args.file, 'w', encoding='utf-8') as f:
         json.dump(word_dictionary, f, indent=2, ensure_ascii=False)
