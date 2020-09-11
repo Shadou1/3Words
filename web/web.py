@@ -26,7 +26,7 @@ def hello_world():
 
 @app.route('/user')
 def get_user():
-    return 'Pidori zdes'
+    return 'Sasha'
 
 @app.route('/users/')
 def get_users():
@@ -39,7 +39,7 @@ def get_user_by_name(username):
 @app.route('/words/<word>')
 def get_word(word):
     word_dict = get_wiktionary_word(word)
-    return flask.render_template('pages/words/word.html', word_name=word, word_dict=word_dict)
+    return flask.render_template('pages/words/word.html', word_name=word, word_dict=word_dict) if word_dict else f'No such word {word}'
 
 # with app.test_request_context():
 #     print(flask.url_for('hello_world'))
