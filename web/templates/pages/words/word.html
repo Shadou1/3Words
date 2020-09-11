@@ -1,0 +1,41 @@
+<!doctype html>
+<title>{{ word_name }}</title>
+{% for etymology, etymology_dict in word_dict['English'].items() %}
+
+  <div class='etymology-div'>
+
+    <h2 class='etymology-h'>{{ etymology.replace('_', ' ') }}</h2>
+
+    {% for part_of_speech, part_of_speech_list in etymology_dict.items() %}
+    
+      <div class='part-of-speech-div'>
+
+        <h3 class='part-of-speech-h'>{{ part_of_speech.replace('_', ' ') }}</h3>
+
+        <ol class='descriptions'>
+
+        {% for description in part_of_speech_list %}
+
+          <li class='description'>{{ description[0] }}
+
+            <ol class='examples'>
+
+              {% for desc in description[1] %}
+                <li class='example'>{{ desc }}</li>
+              {% endfor %}
+
+            </ol>
+
+          </li>
+        
+        {% endfor %}
+
+        </ol>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+{% endfor %}

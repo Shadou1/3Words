@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Words</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <!-- <link rel="stylesheet" href="static/styles/style.css"> -->
+</head>
+<body>
+    
+    <form id="find-word-form">
+
+        <label for="word-input">Word to find:</label>
+        <input type="text" name="word" id="word-input">
+        <input id="find-word-button" type="submit" value="Find Word">
+
+        <!-- <button id="find-word-button">Find Word</button> -->
+
+    </form>
+
+    <section id="word-description">
+
+    </section>
+
+    <script src="static/scripts/script.js"></script>
+
+</body>
+</html>
